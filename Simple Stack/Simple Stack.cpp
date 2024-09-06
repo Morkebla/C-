@@ -34,7 +34,7 @@ public:
     }
     void Pop()
     {
-        if (size == 0) { throw std::out_of_range("There are no items to remove"); }
+        if (size == 0) { throw std::out_of_range("Stack is Empty"); }
         size--;
         if (size < capacity / 4) 
         {
@@ -47,7 +47,7 @@ public:
     }
     int Top()const
     {
-        if (size == 0) { throw std::out_of_range("There are no items to remove"); }
+        if (size == 0) { throw std::out_of_range("Stack is Empty"); }
         return arr[size - 1];
     }
     bool IsEmpty()
